@@ -1,4 +1,4 @@
-package logic
+package user
 
 import (
 	"context"
@@ -9,22 +9,22 @@ import (
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
-type FlashSaleLogic struct {
+type UserCollectionAddLogic struct {
 	logx.Logger
 	ctx    context.Context
 	svcCtx *svc.ServiceContext
 }
 
-// 限时抢购
-func NewFlashSaleLogic(ctx context.Context, svcCtx *svc.ServiceContext) *FlashSaleLogic {
-	return &FlashSaleLogic{
+// add user collection
+func NewUserCollectionAddLogic(ctx context.Context, svcCtx *svc.ServiceContext) *UserCollectionAddLogic {
+	return &UserCollectionAddLogic{
 		Logger: logx.WithContext(ctx),
 		ctx:    ctx,
 		svcCtx: svcCtx,
 	}
 }
 
-func (l *FlashSaleLogic) FlashSale() (resp *types.FlashSaleResponse, err error) {
+func (l *UserCollectionAddLogic) UserCollectionAdd(req *types.UserCollectionAddReq) (resp *types.UserCollectionAddRes, err error) {
 	// todo: add your logic here and delete this line
 
 	return

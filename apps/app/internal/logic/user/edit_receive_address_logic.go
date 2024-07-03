@@ -1,4 +1,4 @@
-package logic
+package user
 
 import (
 	"context"
@@ -9,22 +9,22 @@ import (
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
-type FlashSaleLogic struct {
+type EditReceiveAddressLogic struct {
 	logx.Logger
 	ctx    context.Context
 	svcCtx *svc.ServiceContext
 }
 
-// 限时抢购
-func NewFlashSaleLogic(ctx context.Context, svcCtx *svc.ServiceContext) *FlashSaleLogic {
-	return &FlashSaleLogic{
+// edit user receiveAddress
+func NewEditReceiveAddressLogic(ctx context.Context, svcCtx *svc.ServiceContext) *EditReceiveAddressLogic {
+	return &EditReceiveAddressLogic{
 		Logger: logx.WithContext(ctx),
 		ctx:    ctx,
 		svcCtx: svcCtx,
 	}
 }
 
-func (l *FlashSaleLogic) FlashSale() (resp *types.FlashSaleResponse, err error) {
+func (l *EditReceiveAddressLogic) EditReceiveAddress(req *types.UserReceiveAddressEditReq) (resp *types.UserReceiveAddressEditRes, err error) {
 	// todo: add your logic here and delete this line
 
 	return
