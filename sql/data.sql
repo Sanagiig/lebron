@@ -1,4 +1,4 @@
-USE product;
+
 
 INSERT INTO category (id, parentid, name, status)
 VALUES (1, 0, '男装', 1),

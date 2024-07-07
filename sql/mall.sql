@@ -1,6 +1,5 @@
 /*========================>database user <===================================*/
 CREATE DATABASE user;
-USE user;
 
 CREATE TABLE `user` (
                         `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户ID',
@@ -38,7 +37,6 @@ CREATE TABLE `user_receive_address` (
 
 /*========================>database product <===================================*/
 CREATE DATABASE product;
-USE product;
 
 CREATE TABLE `product` (
                            `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '商品id',
@@ -80,7 +78,6 @@ CREATE TABLE `product_operation` (
 
 /*========================>database cart <===================================*/
 CREATE DATABASE cart;
-USE cart;
 
 CREATE TABLE `cart` (
                         `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '购物车id',
@@ -98,7 +95,6 @@ CREATE TABLE `cart` (
 
 /*========================>database orders <===================================*/
 CREATE DATABASE orders;
-USE orders;
 
 CREATE TABLE `orders` (
                           `id` varchar(64) NOT NULL DEFAULT '' COMMENT '订单id',
@@ -153,7 +149,6 @@ CREATE TABLE `shipping` (
 
 /*========================>database pay <===================================*/
 CREATE DATABASE pay;
-USE pay;
 
 CREATE TABLE `payinfo` (
                            `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '支付信息表id',
@@ -172,7 +167,6 @@ CREATE TABLE `payinfo` (
 
 /*========================>database reply <===================================*/
 CREATE DATABASE reply;
-USE reply;
 
 CREATE TABLE `reply`(
                         `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '评论表id',
