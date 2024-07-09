@@ -11,13 +11,15 @@ OrderRPC:
     Hosts:
       - 127.0.0.1:2379
     Key: order.rpc
-  NonBlock: true
 ProductRPC:
   Etcd:
     Hosts:
       - 127.0.0.1:2379
     Key: product.rpc
+<<<<<<< HEAD
   NonBlock: true
+=======
+>>>>>>> 394adba (update)
 ReplyRPC:
   Etcd:
     Hosts:

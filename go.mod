@@ -4,6 +4,7 @@ go 1.22.1
 
 require (
 	github.com/zeromicro/go-zero v1.6.6
+	golang.org/x/sync v0.7.0
 	google.golang.org/grpc v1.65.0
 	google.golang.org/protobuf v1.34.2
 )

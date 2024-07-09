@@ -3,6 +3,7 @@ package svc
 import (
 	"github.com/Sanagiig/lebron/apps/product/rpc/internal/config"
 	"github.com/Sanagiig/lebron/apps/product/rpc/model"
+
 	"github.com/zeromicro/go-zero/core/collection"
 	"github.com/zeromicro/go-zero/core/stores/sqlx"
 	"golang.org/x/sync/singleflight"
@@ -20,8 +21,14 @@ type ServiceContext struct {
 	LocalCache     *collection.Cache
 }
 
+type ServiceContext struct {
+	Config       config.Config
+	ProductModel model.ProductModel
+}
+
 func NewServiceContext(c config.Config) *ServiceContext {
 	conn := sqlx.NewMysql(c.DataSource)
+
 	localCache, err := collection.NewCache(localCacheExpire)
 	if err != nil {
 		panic(err)
@@ -33,5 +40,9 @@ func NewServiceContext(c config.Config) *ServiceContext {
 		ProductModel:   model.NewProductModel(conn),
 		CategoryModel:  model.NewCategoryModel(conn),
 		OperationModel: model.NewProductOperationModel(conn),
+
+	return &ServiceContext{
+		Config:       c,
+		ProductModel: model.NewProductModel(conn),
 	}
 }

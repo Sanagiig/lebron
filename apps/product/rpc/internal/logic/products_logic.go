@@ -2,15 +2,18 @@ package logic
 
 import (
 	"context"
-	"github.com/Sanagiig/lebron/apps/product/rpc/model"
-	"github.com/zeromicro/go-zero/core/mr"
 	"strconv"
 	"strings"
 
+	"github.com/Sanagiig/lebron/apps/product/rpc/model"
+	"github.com/zeromicro/go-zero/core/mr"
+
 	"github.com/Sanagiig/lebron/apps/product/rpc/internal/svc"
+	"github.com/Sanagiig/lebron/apps/product/rpc/model"
 	"github.com/Sanagiig/lebron/apps/product/rpc/product"
 
 	"github.com/zeromicro/go-zero/core/logx"
+	"github.com/zeromicro/go-zero/core/mr"
 )
 
 type ProductsLogic struct {

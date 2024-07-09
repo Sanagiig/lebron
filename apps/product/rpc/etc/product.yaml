@@ -1,6 +1,6 @@
 Name: product.rpc
-ListenOn: 0.0.0.0:9002
-DataSource: root:7q8w9e@tcp(127.0.0.1:3306)/lebron?parseTime=true
+ListenOn: 127.0.0.1:9002
+DataSource: root:lwj@1993@tcp(127.0.0.1:3306)/product?parseTime=true
 Etcd:
   Hosts:
   - 127.0.0.1:2379
